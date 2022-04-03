@@ -7,4 +7,5 @@ import (
 
 func test() {
 	fmt.Println(project.ProjectName)
+	fmt.Println(project.House{})
 }

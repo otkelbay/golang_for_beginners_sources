@@ -15,22 +15,14 @@ func structsExamples() {
 	var tom person
 	tom = person{"Tom", 24}
 
-	nurlan := person{"Nurlan", 23}
-
-	vanya := person{name: "Vanya"}
-
-	secretSpy := person{}
-
-	fmt.Println(tom, nurlan, vanya, secretSpy)
-
-	fmt.Println(tom.age, tom.name)
-
 	tom.age = 40
 	tom.name = "Jerry"
 
-	fmt.Println(tom)
+	fmt.Println(tom.age)
 
 	tom.changeNameAndAge("Danny", 22)
+
+	fmt.Println(tom)
 	nickName := tom.generateNickName()
 	tom.eat("бургер")
 

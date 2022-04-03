@@ -12,6 +12,18 @@ func main() {
 	fmt.Println(notebookBrand, studentsCount, age)
 
 	structsExamples()
+
+	//0 - нолики
+	//1 - X
+	//2 - пустое
+	var krestikiNoliki [][]int
+	krestikiNoliki = [][]int{
+		{2, 2, 1},
+		{2, 0, 2},
+		{10, 2, 2},
+	}
+
+	fmt.Println(krestikiNoliki[2][0])
 }
 
 func doSomething() {
@@ -28,6 +40,9 @@ func doSomething() {
 		balance := 100
 		fmt.Println(balance)
 		fmt.Println("Ты принят на работу!")
+		if acceptedToJob {
+			fmt.Println(balance)
+		}
 	} else {
 		acceptedToJob = false
 		fmt.Println("Ты не принят на работу!")
