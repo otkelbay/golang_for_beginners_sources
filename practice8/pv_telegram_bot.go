@@ -154,6 +154,9 @@ func main() {
 				log.Panic(err)
 			}
 			continue
+		case "order_details":
+			fmt.Println(update.Message.Text)
+			continue
 		}
 
 		if _, err := bot.Send(msg); err != nil {
