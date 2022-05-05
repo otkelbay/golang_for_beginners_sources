@@ -71,10 +71,9 @@ func main() {
 		case "menu":
 			for _, menuItem := range menuItems {
 				msg := tgbotapi.NewMessage(update.Message.Chat.ID, "Я вас не понял")
-				msg.Text = fmt.Sprintf(`
-				Название: %s 
-				Цена: %d
+				msg.Text = fmt.Sprintf(`Название: %s '\n' Цена: %d
 				Состав: %s`, menuItem.Name, menuItem.Price, menuItem.Composition)
+				msg.ParseMode = "markdown"
 
 				if _, err := bot.Send(msg); err != nil {
 					log.Panic(err)
